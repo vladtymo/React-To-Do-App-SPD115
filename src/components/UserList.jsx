@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { USERS } from "./users-mock";
+import './UserList.css';
 
 function UserList() {
 
@@ -14,7 +15,7 @@ function UserList() {
     const clear = () => setUsers([]);
 
     return (
-        <>
+        <div className="UserList">
             <h2>User List</h2>
             <ul>
                 {users.map((i, index) =>
@@ -23,7 +24,7 @@ function UserList() {
             </ul>
             <button onClick={add}>Add New User</button>
             <button onClick={clear}>Clear All Users</button>
-        </>
+        </div>
     );
 }
 

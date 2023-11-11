@@ -1,0 +1,20 @@
+.UserList ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.UserList ul li {
+    background-color: rgb(38, 78, 60);
+    color: white;
+    padding: 6px;
+    margin-bottom: 4px;
+    border-radius: 4px;
+    transition: .2s;
+}
+
+.UserList ul li:hover {
+    transform: rotate(5deg);
+    background-color: rgb(22, 48, 36);
+    box-shadow: 0 0 12px black;
+    cursor: pointer;
+}

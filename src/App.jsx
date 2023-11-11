@@ -1,16 +1,23 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import About from './components/About';
 import Counter from './components/Counter';
 import UserList from './components/UserList';
+import Layout from './components/Layout';
+import NotFound from './components/NotFound';
 
 function App() {
     return (
         <div className='App'>
-            <h1>Hello React!</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam veritatis repellat, similique voluptates labore beatae, necessitatibus iusto delectus vitae laudantium ipsa quaerat quidem. Eaque ab similique officiis dignissimos quae nihil?</p>
-
-            <Counter />
-            <UserList />
-
+            <Routes>
+                <Route path='/' element={<Layout />}>
+                    <Route index element={<p>Home Page!</p>} />
+                    <Route path='counter' element={<Counter />} />
+                    <Route path='users' element={<UserList />} />
+                    <Route path='about' element={<About />} />
+                    <Route path='*' element={<NotFound />} />
+                </Route>
+            </Routes>
         </div>
     );
 }
