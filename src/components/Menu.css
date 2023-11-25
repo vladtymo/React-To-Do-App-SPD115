@@ -1,9 +1,9 @@
-nav {
+/* nav {
     text-align: center;
-}
+} */
 
 /* First Level */
-nav ul {
+/* nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -29,4 +29,4 @@ nav li a {
 
 nav li:hover>a {
     background-color: rgb(65, 127, 90);
-}
+} */

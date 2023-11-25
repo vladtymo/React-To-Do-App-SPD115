@@ -1,3 +1,4 @@
+import { Slider } from "@nextui-org/react";
 import { useState } from "react";
 
 function Counter() {
@@ -25,6 +26,14 @@ function Counter() {
 
     return (
         <>
+            <Slider
+                label="Temperature"
+                step={0.01}
+                maxValue={1}
+                minValue={0}
+                defaultValue={0.4}
+                className="max-w-md"
+            />
             <p>Counter value: [{count == 0 ? "-" : count}]</p>
             <button onClick={increment}>Increment</button>
             <button onClick={reset}>Reset</button>

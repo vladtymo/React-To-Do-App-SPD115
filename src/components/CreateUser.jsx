@@ -1,3 +1,4 @@
+import { Button } from '@nextui-org/react';
 import React from 'react'
 import { useForm } from 'react-hook-form'
 
@@ -32,7 +33,7 @@ export default function CreateUser() {
                     <input {...register("isAdmin")} type="checkbox" />
                 </label>
                 <div>
-                    <button type="submit">Create</button>
+                    <Button type='submit' color='success'>Create</Button>
                 </div>
             </form>
         </>
