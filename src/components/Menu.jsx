@@ -1,7 +1,12 @@
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button } from "@nextui-org/react";
 import './Menu.css';
+import { useContext } from "react";
+import { CounterContext } from "../contexts/counter.context";
 
 function Menu() {
+
+    const { count } = useContext(CounterContext);
+
     return (
         // <nav className="Menu">
         //     <ul>
@@ -48,7 +53,7 @@ function Menu() {
                 </NavbarItem>
                 <NavbarItem>
                     <Link color="foreground" href="counter">
-                        Counter
+                        Counter ({count})
                     </Link>
                 </NavbarItem>
             </NavbarContent>
